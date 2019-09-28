@@ -33,6 +33,25 @@ def split_column_content(df,col,delimiter=';'):
     new_df = pd.DataFrame(df[col].dropna().str.split(delimiter).tolist()).stack()
     return new_df
 
+def count_and_plot(s,title):
+    '''
+    INPUT:
+        - s : a pd series (a column sliced from a dataframe) to perform value_count
+        - col - string : the name of the column you would like to know about
+        - title - string : the title of the chart
+    OUTPUT:
+        - vc - number : the count of each attribute in chosen column
+    '''
+    ratio = s.value_counts()/s.shape[0]
+    df = pd.DataFrame(pd.Series(ratio)).reset_index()
+    df.columns = ['type','ratio']
+    print(df.head(10))
+    ratio[:10].plot(kind='barh')
+    plt.title(title)
+    plt.grid(axis='x',linestyle='--')
+    plt.xlabel('Ratio')
+    plt.savefig(title)
+
 def plot_value_counts(df, col):
     '''
     INPUT:
@@ -43,8 +62,11 @@ def plot_value_counts(df, col):
     '''
     value_count = df[col].value_counts()
     print(value_count[:10]/df.shape[0])
-    (value_count[:10]/df.shape[0]).plot(kind='bar')
+    (value_count[:10]/df.shape[0]).plot(kind='barh')
     plt.title(col)
+    plt.grid(axis='x',linestyle='--')
+    plt.xlabel('Ratio')
+
 
     
 def total_count(df, col1, col2, look_for):
