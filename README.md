@@ -9,8 +9,10 @@
 5. [Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
+- To download the data, please go to [Stack Over Flow Annual Developer Survey](https://insights.stackoverflow.com/survey) and choose the dataset for 2019.    
 
 - There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python.  This project is built using Anaconda 1.7.2, Python versions 3.6.3 and jupyter notebook 5.7.8.
+
 - Libraries used:
 
     `pandas`
@@ -20,6 +22,7 @@
     `matplotlib`
 
     `seaborn`
+    
 ## Project Motivation<a name="motivation"></a>
 
 For this project, I was interestested in using Stack Overflow data from 2019 to better understand:
@@ -28,6 +31,8 @@ For this project, I was interestested in using Stack Overflow data from 2019 to 
 2. What are the challenges that females are facing in tech field? 
 3. What does the data suggest of males and females in terms of salary and working hours? 
 4. What factors associat with high salary, eg. education level, major, etc.?
+5. Female with what skills receive the highest salary?
+
 
 
 ## File Descriptions <a name="files"></a>
