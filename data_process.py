@@ -6,6 +6,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
 import matplotlib.pyplot as plt
 
+
+
 # Function to show the ratio and count of missing data
 def missing_ratio(df):
     '''
@@ -19,6 +21,16 @@ def missing_ratio(df):
     ratio = (df.isnull().sum()/df.isnull().count()*100).sort_values(ascending = False)
     new_df = pd.concat([count, ratio], axis=1, keys=['Count', 'Ratio'])
     return new_df
+
+def get_description(column_name, schema):
+    '''
+    INPUT - schema - pandas dataframe with the schema of the developers survey
+            column_name - string - the name of the column you would like to know about
+    OUTPUT - 
+            desc - string - the description of the column
+    '''
+    desc = list(schema[schema['Column'] == column_name]['QuestionText'])[0]
+    return desc
 
 # Function to separate strings in a column content
 def split_column_content(df,col,delimiter=';'):
@@ -112,11 +124,11 @@ def clean_data(df):
     6. Create dummy columns for all the categorical variables in X, drop the original columns
     '''
     # Drop rows with missing salary values
-    df = df.dropna(subset=['Salary'], axis=0)
-    y = df['Salary']
+    df = df.dropna(subset=['ConvertedComp'], axis=0)
+    y = df['ConvertedComp']
     
     #Drop respondent and expected salary columns
-    df = df.drop(['Respondent', 'ExpectedSalary', 'Salary'], axis=1)
+    df = df.drop(['Respondent', 'ConvertedComp', 'CompTotal'], axis=1)
     
     # Fill numeric columns with the mean
     num_vars = df.select_dtypes(include=['float', 'int']).columns
