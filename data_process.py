@@ -33,16 +33,34 @@ def get_description(column_name, schema):
     return desc
 
 # Function to separate strings in a column content
-def split_column_content(df,col,delimiter=';'):
+def split_column_content(df,col1,col2=None,delimiter=';'):
     '''
     INPUT:
-        - df : a datafram 
+        - df : a dataframe of inerest 
         - col - string : a column for splitting
         - delimiter - string : a character that seperates the strings in a column content
     OUTPUT:
         - new_df : a new dataframe 
     '''
-    new_df = pd.DataFrame(df[col].dropna().str.split(delimiter).tolist()).stack()
+    new_df = pd.DataFrame(df[col1].dropna().str.split(delimiter).tolist()).stack()
+    new_df.reset_index(drop=True)
+    return new_df
+
+def split_and_concat(df,col1,col2,delimiter=';'):
+    '''
+    INPUT:
+        - df : a dataframe of inerest
+        - col1 - string : a column for splitting
+        - col2 = string : a column you want to concat to col1 after col1 has been split
+        - delimiter - string : a character that seperates the strings in a column content
+    OUTPUT:
+        - new_df : a new dataframe 
+    '''
+    new_df = pd.DataFrame(columns = [col1, col2])
+    for index, row in df.iterrows():
+        columns = row[col1].new_df(delimeter)
+        for col in columns:
+            new_df.loc[len(new_df)] = [col, row[col2]]
     return new_df
 
 def count_and_plot(s,title):
