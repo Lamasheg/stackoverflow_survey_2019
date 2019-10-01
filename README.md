@@ -27,12 +27,11 @@
 
 For this project, I was interestested in using Stack Overflow data from 2019 to better understand:
 
-1. What are the distributions of females with respect to country, ethnicity, level of education, etc?
-2. What are the challenges that females are facing in tech field? 
-3. What does the data suggest of males and females in terms of salary and working hours? 
-4. What factors associat with high salary, eg. education level, major, etc.?
-5. Female with what skills receive the highest salary?
-
+1. What are the distributions of women with respect to country, ethnicity, level of education, etc. in 2019?
+2. What are the most popular types of development/languages among women in 2019?
+3. What does the data suggest of man and woman in terms of salary and working hours? 
+4. What factors associate with high salary, eg. type of development, education level, etc.?
+5. Women with what skills receive the highest salary?
 
 
 ## File Descriptions <a name="files"></a>
