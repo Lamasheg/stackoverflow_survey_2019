@@ -31,7 +31,7 @@ For this project, I was interestested in using Stack Overflow data from 2019 to 
 2. What are the most popular types of development/languages among women in 2019?
 3. What does the data suggest of man and woman in terms of salary and working hours? 
 4. What factors associate with high salary, eg. type of development, education level, etc.?
-5. Women with what skills receive the highest salary?
+5. Women with what skills earn more?
 
 
 ## File Descriptions <a name="files"></a>
