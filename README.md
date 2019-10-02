@@ -38,7 +38,7 @@ For this project, I was interestested in using Stack Overflow data from 2019 to 
 
 - `stackoverflow_survey.ipynb`: showcase work related to the above questions.  The notebooks is exploratory in searching through the data pertaining to the questions showcased by the notebook title.  Markdown cells were used to assist in walking through the thought process for individual steps.  
 
-- `prepare.py`: runs the necessary code to process and prepare the data.
+- `process.py`: runs the necessary code to process and prepare the data.
 
 ## Results<a name="results"></a>
 
