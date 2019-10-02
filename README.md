@@ -9,7 +9,7 @@
 5. [Acknowledgements](#licensing)
 
 ## Installation <a name="installation"></a>
-- To download the data, please go to [Stack Over Flow Annual Developer Survey](https://insights.stackoverflow.com/survey) and choose the dataset for 2019.    
+- The original data is 197MB, to download please go to [Stack Over Flow Annual Developer Survey](https://insights.stackoverflow.com/survey) and choose the dataset for 2019.    
 
 - There should be no necessary libraries to run the code here beyond the Anaconda distribution of Python.  This project is built using Anaconda 1.7.2, Python versions 3.6.3 and jupyter notebook 5.7.8.
 
@@ -36,15 +36,15 @@ For this project, I was interestested in using Stack Overflow data from 2019 to 
 
 ## File Descriptions <a name="files"></a>
 
-There is a notebooks available here to showcase work related to the above questions.  The notebooks is exploratory in searching through the data pertaining to the questions showcased by the notebook title.  Markdown cells were used to assist in walking through the thought process for individual steps.  
+- `stackoverflow_survey.ipynb`: showcase work related to the above questions.  The notebooks is exploratory in searching through the data pertaining to the questions showcased by the notebook title.  Markdown cells were used to assist in walking through the thought process for individual steps.  
 
-There is an additional `.py` file that runs the necessary code to obtain the final model used to predict salary.
+- `prepare.py`: runs the necessary code to process and prepare the data.
 
 ## Results<a name="results"></a>
 
-The main findings of the code can be found at the post available [here]().
+The main findings of the code can be found at the post available [here](https://medium.com/@guojian0706/this-tells-you-all-about-womens-career-in-tech-in-2019-85bcf9ab71e5?sk=49b7aa0e11d37aa467047fc5bd86f48a).
 
 ## Acknowledgements<a name="licensing"></a>
-Thanks to Stack Overflow for providing the dataset:[Stack Over Flow Annual Developer Survey](https://insights.stackoverflow.com/survey)
+Thanks to Udacity for providing such a great project topic, and to Stack Overflow for providing the dataset:[Stack Over Flow Annual Developer Survey](https://insights.stackoverflow.com/survey) ❤
 
    
